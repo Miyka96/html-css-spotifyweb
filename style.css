@@ -17,6 +17,7 @@ body{
     background-color: #282828;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 .main-container{
     background-color: rgb(7, 6, 6);
@@ -54,7 +55,14 @@ body{
 .toolbar_center{
     flex-grow: 1;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
+/* TOOLBAR SIDE (LEFT & RIGHT)----------- */
 .toolbar_side_piece{ 
     height: 100%;
     display: flex;
@@ -123,5 +131,24 @@ a{
     margin: 0, 10px;
     opacity: 0.5;
     position: relative;
+}
+
+/* TOOLBAR CENTER------------ */
+
+.music-control-buttons>ul li{
+    display: inline-block;
+    padding: 0 10px;
+    color: white;
+}
+
+.music-control-buttons a{
+    text-decoration: currentColor;
+}
+
+.music-progress-slider_wrapper{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
 }
 
