@@ -1,9 +1,42 @@
 *{
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: ;
 }
 
-.flex-container{
+body{
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
+.toolbar{
+    width: 100%;
+    height: 80px;
+    background-color: #282828;
+}
+.main-container{
+    background-color: rgb(7, 6, 6);
+    flex-grow: 1;
+    display: flex;
+}
+.nav-bar{
+    height: 100%;
+    width: 250px;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.premium{
+    height: 80px;
+    width: 100%;
+    background-color: #080B12;
+}
+.music-playlist{
+    height: 100%;
+    background-color: #141922;
+}
+
+
