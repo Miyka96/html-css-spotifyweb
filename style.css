@@ -5,7 +5,7 @@
 }
 
 /* LAYOUT MACRO AREAS ----------------------------------------*/
-body{
+.main-wrapper{
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,11 +13,12 @@ body{
 }
 .toolbar{
     width: 100%;
-    height: 75px;
+    height: 80px;
     background-color: #282828;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    gap: 100px;
 }
 .main-container{
     background-color: rgb(7, 6, 6);
@@ -54,11 +55,12 @@ body{
 }
 .toolbar_center{
     flex-grow: 1;
-    padding: 0 20px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    align-content: center;
     gap: 10px;
 }
 
@@ -97,58 +99,68 @@ a{
     text-decoration: underline;
 }
 
-#heart_icon, #folder_icon, #list_icon, #desktop_icon, #volume_icon{
+.icon{
     color:#b4b3b3 ;
 }
-#heart_icon:hover, #folder_icon:hover, 
-#list_icon:hover, #desktop_icon:hover, #volume_icon:hover {
+.icon:hover {
     color: white;
 }
 
 .volume-slider{
-    height: 100%;
+    max-width: 100%;
+    min-width: 200px;
     border-radius: 2px;
     width: 90%;
     display: flex;
     align-items: center;
-    padding-right: 10px;
+    justify-content: center;
 }
 .volume-slider_1{
-    position: relative;
-    left: 0;
-    z-index: 1;
     height: 4px;
-    width: 35%;
-    background-color:#b4b3b3 ;
+    width: 100%;
+    background-color: #b4b3b3;
     border-radius: 8px;
+    opacity: 0.5;
 }
 
 .volume-slider_2{
     height: 4px;
-    width: 90%;
-    background-color:#b4b3b3 ;
+    width: 35%;
     border-radius: 8px;
-    margin: 0, 10px;
-    opacity: 0.5;
-    position: relative;
+    background-color: white;
+}
+.toolbar_side .volume-slider{
+    padding-right: 60%;
+}
+.volume-level{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    color: white;
 }
 
 /* TOOLBAR CENTER------------ */
 
-.music-control-buttons>ul li{
-    display: inline-block;
-    padding: 0 10px;
-    color: white;
+.music-control-buttons>ul{
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    align-items: center;
 }
 
-.music-control-buttons a{
-    text-decoration: currentColor;
+#play-icon{
+    font-size: 28px;
+    padding: 0 10px;
 }
 
 .music-progress-slider_wrapper{
     width: 100%;
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: space-between;
 }
 
+.minutes{
+    color: white;
+    font-size: 12px;
+}
