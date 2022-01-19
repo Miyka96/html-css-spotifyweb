@@ -9,8 +9,8 @@
     height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 .toolbar{
     position: fixed;
@@ -29,12 +29,13 @@
     display: flex;
 }
 .nav-bar{
-    height: 100%;
+    height: calc(100vh - 80px);
     width: 200px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-left: 15px;
+    padding-right: 15px;
 }
 .main-content{
     display: flex;
@@ -49,7 +50,7 @@
 .music-playlist{
     height: 100%;
     background-color: #141922;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 /* TOOLBAR --------------------------------------------------*/
@@ -191,56 +192,115 @@ a{
     padding-top: 10px;
 }
 .nav-buttons{
-    color: white;
     font-size: 12px;
 }
-.nav-buttons ul li {
+.nav-buttons ul li:hover{
+    color: white;
+}
+.nav-buttons ul li{
     display: flex;
     gap: 8px;
+    color:#b4b3b3;
 }
 .nav-buttons ul{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+.btn_description a{
+    color:#b4b3b3;
+}
+.btn_description a:hover{
+    color: white;
+}
+
 /* ----- */
 .playlist-title{
-    color: white;
+    color:#b4b3b3;
 }
 .playlist-title>h5{
     text-transform: uppercase;
     padding-top: 18px;
     padding-bottom: 14px;
     font-size: 15px;
+    color:white;
 }
-.create-playlist{
+.create-playlist a{
     display: flex;
     gap: 10px;
-    height: 28px;
+    height: 25px;
     align-items: center;
+    color:#b4b3b3;
+    text-decoration: currentColor;
+}
+.create-playlist a:hover{
+    color: white;
 }
 .create-playlist i{
     font-size: 30px;
 }
-/* --------- */
-.playlist-li{
-    overflow-y: scroll;
+.playlist-title .create-playlist:hover{
     color: white;
-    font-size: 12px;
 }
-.playlist-li ul{
+
+/* --------- */
+
+.playlist-li a{
+    overflow-y: auto;
+    color:#b4b3b3;
+    font-size: 12px;
+    text-decoration: currentColor;
+}
+.playlist-li a:hover{
+    color: white;
+}
+.playlist-li{
     display: flex;
     flex-direction: column;
     gap: 9px;
-    flex-shrink: 1;
+    flex-grow: 1;
 }
 /* ----- */
-.nav-footer{
+.nav-footer a{
+    color:#b4b3b3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nav-footer a:hover{
     color: white;
+}
+.nav-footer_download{
     display: flex;
     gap: 10px;
-    align-items: flex-end;
+    align-items: center;
+    padding-bottom: 8px;
 }
-.nav-footer i{
+.nav-footer_download i{
     font-size: 14px;
+    color:#b4b3b3;
+}
+.hr{
+    width: 100%;
+    height: 0.5px;
+    background-color:#b4b3b3;
+    margin-bottom: 8px;
+}
+.user-name{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 8px;
+}
+.user-name_text{
+    flex-grow: 1;
+    color:white;
+    font-size: 13px;
+}
+.propic>img{
+    width: 28px;
+    height: 28px;
+    background-color: gray;
+    border-radius: 50%;
+    object-fit: contain;
 }
