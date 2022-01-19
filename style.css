@@ -235,13 +235,12 @@ a{
     flex-shrink: 1;
 }
 /* ----- */
-.install-button{
+.nav-footer{
     color: white;
     display: flex;
     gap: 10px;
     align-items: flex-end;
-    flex-grow: 1;
 }
-.install-button i{
+.nav-footer i{
     font-size: 14px;
 }
