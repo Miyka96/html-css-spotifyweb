@@ -196,6 +196,13 @@ ul{
 
 /* NAV-BAR------------------------------------- */
 
+.active::before{
+    content:"";
+    display: block;
+    width: 3px;
+    height: 14px;
+    background-color: lime;
+}
 .logo-nav{
     height: 70px;
     width: 100%;
