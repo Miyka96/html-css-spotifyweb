@@ -57,6 +57,7 @@
 }
 .music-playlist{
     height: calc(100vh - 80px - 80px);
+    width: calc(100vw - 170px);
     background-color: #141922;
     overflow-y: auto;
 }
@@ -362,73 +363,49 @@ ul{
     }
 
     .music-wrapper{
-        padding: 10px 15px;
+        overflow-y: auto;
     }
-
-    
-    /* .album-title{
-        color: white;
-        font-size: 18px;
-        padding-top: 20px;
-    }
-    .album-description{
-        color:#b4b3b3;
-        font-size: 12px;
-        padding-top: 5px;
-    } */
-    /* .album-wrapper{
+    .music-card_wrapper{
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-start;
-        gap: 25px;
-        color: white;
-        padding-top: 20px;
-    } */
-    /* .album-wrapper h4{
-        width: 180px;
-        font-size: 14px;
-        text-align: center;
+        gap: 1%;
+        flex-grow: 1;
     }
-    .album-wrapper h5{
-        color:#b4b3b3;
-        width: 180px;
-        text-align: center;
-    }
-    .album-wrapper_elements{
-        display: flex;
-    }
-    .album-wrapper_img{
-        display: flex;
+    .music-card{
         flex-direction: column;
-        align-items: center;
-        gap: 6px;
+        display: flex;
+        width:calc( 95% / 6 );
+        text-align: center;
+        color: white;
     }
-    .album-wrapper_img img{
-        height: 180px;
-        width: 180px;
+    .music-card_img{
+        position: relative;
     }
-
-    .album-wrapper_img>i{
+    .music-card_img i{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50% -50%);
+        transform: translate(-50%,-50%);
+        font-size: 35px;
+        visibility: hidden;
+        z-index: 2;
+    }
+    .music-card:hover .music-card_img i{
+        visibility: visible;
+    }
+    
+
+    .music-card_img>img{
+        width: 100%;
+        height: 100%;
     }
 
-    .rounded-wrapper>img{
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: contain;
-    } */
-
     /* REGOLE OVERLAY----------------------- */
-    /* .overlay::after{
+    .overlay::after{
         content: '';
         display: block;
         position: absolute;
         background-color: black;
-        border-radius: 20px;
         opacity: 0;
         top: 0;
         bottom: 0;
@@ -436,5 +413,6 @@ ul{
         right: 0;
     }
     .overlay:hover::after{
-        opacity: 0.2;
-    } */
+        opacity: 0.4;
+        z-index: 1;
+    }
