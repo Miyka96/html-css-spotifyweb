@@ -365,7 +365,8 @@ ul{
         padding: 10px 15px;
     }
 
-    .album-title{
+    
+    /* .album-title{
         color: white;
         font-size: 18px;
         padding-top: 20px;
@@ -374,16 +375,16 @@ ul{
         color:#b4b3b3;
         font-size: 12px;
         padding-top: 5px;
-    }
-    .album-wrapper{
+    } */
+    /* .album-wrapper{
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 25px;
         color: white;
         padding-top: 20px;
-    }
-    .album-wrapper h4{
+    } */
+    /* .album-wrapper h4{
         width: 180px;
         font-size: 14px;
         text-align: center;
@@ -406,9 +407,34 @@ ul{
         height: 180px;
         width: 180px;
     }
+
+    .album-wrapper_img>i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% -50%);
+    }
+
     .rounded-wrapper>img{
         width: 180px;
         height: 180px;
         border-radius: 50%;
         object-fit: contain;
+    } */
+
+    /* REGOLE OVERLAY----------------------- */
+    /* .overlay::after{
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: black;
+        border-radius: 20px;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
+    .overlay:hover::after{
+        opacity: 0.2;
+    } */
