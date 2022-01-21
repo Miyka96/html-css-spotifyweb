@@ -22,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    gap: 100px;
+    gap: 40px;
 }
 .main-container{
     background-color: rgb(7, 6, 6);
@@ -47,9 +47,8 @@
 }
 .premium{
     height: 80px;
-    width: calc(100vw - 200px);
+    width: calc(100vw - 170px);
     background-color: #080B12;
-    top: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -347,6 +346,8 @@ ul{
         text-transform: uppercase;
         padding-top: 18px;
         font-size: 14px;
+        flex-wrap: wrap;
+        white-space: nowrap;
     }
     .music-selection a {
         color:#b4b3b3;
@@ -461,3 +462,32 @@ ul{
         opacity: 0.4;
         z-index: 1;
     }
+
+    /* MEDIA QUERY---------------------- */
+    @media screen and (max-width:1024px) {
+        .music-card{
+            width:calc( 95% / 4 );
+            padding-bottom: 8px;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .music-card{
+            width:calc( 95% / 3 );
+            padding-bottom: 8px;
+    }
+
+    @media screen and (max-width:600px) {
+        .music-card{
+            width:calc( 95% / 2 );
+            padding-bottom: 8px;
+    }
+
+    @media screen and (max-width:425px){
+        .music-card{
+            width:calc( 95%);
+            padding-bottom: 8px;
+        }
+    }
+
+    /* Non riesco a fare l'ultimo, ci provo domani. */
